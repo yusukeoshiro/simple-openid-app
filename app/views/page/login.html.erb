@@ -6,12 +6,20 @@
 
 <p class="text-center" style="margin-top: 100px;">
 	
-<% if session[:user].nil? %>
+<% if @user.nil? %>
 	<a href="/auth" class="btn btn-danger">Login</a>
 <% else %>
-	
-		hello, <%=session[:user] %>! <br/>
-	<a href="/logout" class="btn btn-default">Logout</a>
+			
+		hello, <%=@user.name %>! <br/>
+		your email is: <%=@user.email %>! <br/>
+		<div class="text-right">
+			<a href="<%=@community_url %>">Go to Community</a>
+		</div>		
+		
+		<div class="text-center">
+			<a href="/logout" class="btn btn-default">Logout</a>	
+		</div>
+		
 <% end %>
 
 </p>

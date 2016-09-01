@@ -45,7 +45,15 @@ class AuthController < ApplicationController
 	res = https.request(req)
 	response = JSON.parse(res.body)
 	pp response
-	session[:user] = response["name"]
+
+	user = User.find_by_email( response["email"] )
+	if user.nil?
+		user = User.new
+		user.email = response["email"]
+		user.name = response["name"]
+		user.save		
+	end
+	session[:user_id] = user.id
 	redirect_to login_path
 
   end
