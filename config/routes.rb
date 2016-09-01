@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  get  'login', :to => 'page#login', :as => 'login'
+  get  'logout', :to => 'page#logout', :as => 'logout'
+  get  'auth', :to => 'auth#initiate', :as => 'initiate'
+  get  'session', :to => 'session#create', :as => 'sessions'
+  get  'callback', :to => 'auth#callback', :as => 'callback'
+  root :to => 'page#login'
+
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

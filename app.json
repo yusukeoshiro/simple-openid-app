@@ -1,0 +1,22 @@
+{
+  "name": "Simple OpenID Connect App",
+  "description": "A java based sample for integrating Salesforce Identity and Heroku",
+  "repository": "https://github.com/yusukeoshiro/simple-openid-app",
+  "success_url": "/",
+  "env": {
+    "SALESFORCE_HOST": "login.salesforce.com",
+    "SALESFORCE_CONSUMER_KEY": {
+      "description": "generate this value from in salesforce's connected app setting"
+    },
+    "SALESFORCE_CONSUMER_SECRET": {
+      "description": "generate this value from in salesforce's connected app setting"
+    },
+    "SALESFORCE_REDIRECT_URI": "https://YOURAPP.herokuapp.com/callback"
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"      
+    }
+  ],
+
+}

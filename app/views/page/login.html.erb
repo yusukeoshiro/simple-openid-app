@@ -1,0 +1,21 @@
+
+
+<div class="container">
+
+
+
+<p class="text-center" style="margin-top: 100px;">
+	
+<% if session[:user].nil? %>
+	<a href="/auth" class="btn btn-danger">Login</a>
+<% else %>
+	
+		hello, <%=session[:user] %>! <br/>
+	<a href="/logout" class="btn btn-default">Logout</a>
+<% end %>
+
+</p>
+	
+
+
+</div>
