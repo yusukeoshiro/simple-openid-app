@@ -4,7 +4,10 @@
 
 
 
-<p class="text-center" style="margin-top: 100px;">
+
+	<div class="text-center" style="margin-top: 100px;">
+	
+	<h1><%=ENV["APP_NAME"]%></h1>
 	
 <% if @user.nil? %>
 	<a href="/auth" class="btn btn-danger">Login</a>
@@ -22,7 +25,7 @@
 		
 <% end %>
 
-</p>
+</div>
 	
 
 

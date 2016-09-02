@@ -11,7 +11,9 @@
     "SALESFORCE_CONSUMER_SECRET": {
       "description": "generate this value from in salesforce's connected app setting"
     },
-    "SALESFORCE_REDIRECT_URI": "https://YOURAPP.herokuapp.com/callback"
+    "SALESFORCE_REDIRECT_URI": "https://YOURAPP.herokuapp.com/callback",
+    "APP_NAME": "My Awesome SSO App!",
+    "APP_THEME_COLOR": "#FFFFFF"
   },
   "addons": [
     {
